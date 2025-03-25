@@ -35,7 +35,7 @@
 
 .event-preview {
   position: fixed;
-  top: 35%; /* Cambiato da 50% a 40% per spostarla più in alto */
+  top: 38%; /* Cambiato da 50% a 38% per spostarla più in alto */
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.9);
