@@ -1,41 +1,90 @@
+.timeline-container {
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
 .timeline {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .event {
-    display: inline-block;
-    background: #007bff;
-    color: white;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: bold;
-    text-align: center;
-    min-width: 150px;
-  }
-  
-  .event:hover {
-    background: #0056b3;
-  }
-  
-  .event-details {
-    display: none;
-    padding: 10px;
-    background: #f8f9fa;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    position: absolute;
-    width: 200px;
-    text-align: left;
-    font-size: 14px;
-    color: #333;
-  }
-  
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.year {
+  background: #007bff;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 50px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #003c80;
+}
+
+.year:hover, .year.hover {
+  background: #004499;
+  transform: scale(1.1);
+}
+
+.event-preview {
+  position: fixed;
+  top: 35%; /* Cambiato da 50% a 40% per spostarla più in alto */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  max-width: 250px;
+  max-height: 100px; /* Limita l'altezza */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden; /* Assicura che il testo non esca */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal; /* Testo multilinea se necessario */
+}
+
+.event-details-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  max-height: 200px;
+  background: white;
+  border: 2px solid #007bff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #222;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.close-btn:hover {
+  color: red;
+}
