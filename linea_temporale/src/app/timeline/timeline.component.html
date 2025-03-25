@@ -1,0 +1,10 @@
+<div class="timeline">
+    <h1>Linea Temporale - Anni di Piombo</h1>
+    <div *ngFor="let event of events" class="event" (click)="toggleDetails(event)">
+      {{ event.year }} - {{ event.title }}
+      <div *ngIf="event.show" class="event-details">
+        {{ event.details }}
+      </div>
+    </div>
+  </div>
+  
